@@ -63,6 +63,10 @@ I added an ‘Open File’ button at the no-media-library home page. After waiti
 
 While doing task 1, I noticed a centering issue on a the EmptyLabelButton component, where it wouldn’t center properly, which I fixed.
 
+| Before      | After |
+| ----------- | ----------- |  
+![](screenshots/patch3-before.png) | ![](screenshots/patch3-after.png)
+
 Commits:
 - [d1dd4bf9](https://code.videolan.org/videolan/vlc/-/merge_requests/2141/diffs?commit_id=d1dd4bf9bf1947d11f289a09ca50f0d645d857fb) qml: add 'Open File' button and change dropzone icon at the no-media-library homepage
 - [e8426b15](https://code.videolan.org/videolan/vlc/-/merge_requests/2141/diffs?commit_id=e8426b15be5cac15a6d213fde2775add7eab67b3) qml: fix centering issue with the EmptyLabelButton
@@ -74,6 +78,9 @@ This was my most enjoyable task. It made me understand the beauty of Qml compone
 
 From simple red lines, the end result is rectangles which change size on hover with a visually pleasing animation.
 
+| Before      | After |
+| ----------- | ----------- |  
+![](screenshots/patch4-before.png) | ![](screenshots/patch4-after.png)
 
 Commits:
 - [8ed9912b](https://code.videolan.org/videolan/vlc/-/merge_requests/2244/diffs?commit_id=8ed9912b15577a5391189e13fe948a6d94bb90f0) qt/qml: chapters UI redesign
@@ -83,7 +90,6 @@ Commits:
 ### [Patch 5](https://code.videolan.org/videolan/vlc/-/merge_requests/2378) - Use GridView for network devices (merge not accepted)
 
 Although the initial thought was to show the network devices into a GridView instead of a horizontal ListView, another developer mentioned that a GridView will instantiate all items, which has an expensive and poor performance. That's why this MR was not merged, and Pierre started working on a more complex solution, outside the scope of this MR.
-
 
 ### [Patch 6](https://co) - Delete KeyNavigableGridView
 
@@ -105,6 +111,10 @@ The bookmarks task was even bigger than the chapters UI redesign. This time the 
 
 While creating the bookmarks component, i had to edit the ControlBar.qml a lot of times. The code it had was quit messy and difficult to understand, so i took the initiative to organize it and make it easier to understand.
 
+| Before      | After |
+| ----------- | ----------- |  
+![](screenshots/patch7-before.png) | ![](screenshots/patch7-after.png)
+
 Commits:
 - [f8b01d54](https://code.videolan.org/videolan/vlc/-/merge_requests/2517/diffs?commit_id=f8b01d545e0dee702f10be151d4ef2bd3da937bc) qml: fix progressBar radius and sliderHandle size
 - [57e820c5](https://code.videolan.org/videolan/vlc/-/merge_requests/2517/diffs?commit_id=57e820c54cb0f6e7d4806f821235b7efbbe9ce37) qml: fix PointingTooltip position and arrow offset
@@ -115,4 +125,6 @@ Commits:
 - [d3161967](https://code.videolan.org/videolan/vlc/-/merge_requests/2517/diffs?commit_id=d316196774658746d5573d90b22f9ab7477da5d2) qt/qml: implementation of bookmarks bar under the SliderBar
 
 
-### [Patch 8](https://co) - Error notifications
+### [Patch 8](https://co) - Error notifications (not compeltely finished)
+
+The current error message has several issues (pops up over miniplayer, no dismiss button, needs redesign). I started working on the error notification, which I redesigned and addded a counter on error messages that are repeated. There is still some work to do, like handling the miniplayer and showing all past errors in a dialog.
