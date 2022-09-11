@@ -87,11 +87,11 @@ Commits:
 - [ce53cd1e](https://code.videolan.org/videolan/vlc/-/merge_requests/2244/diffs?commit_id=ce53cd1eb7b78d0189abce3a98565697a93e6069) qml: fix activeFocus issue by using invalidateFilter instead of invalidate
 
 
-### [Patch 5](https://code.videolan.org/videolan/vlc/-/merge_requests/2378) - Use GridView for network devices (merge not accepted)
+### [Patch 5](https://code.videolan.org/videolan/vlc/-/merge_requests/2380) - Use GridView for network devices (merge not accepted)
 
 Although the initial thought was to show the network devices into a GridView instead of a horizontal ListView, another developer mentioned that a GridView will instantiate all items, which has an expensive and poor performance. That's why this MR was not merged, and Pierre started working on a more complex solution, outside the scope of this MR.
 
-### [Patch 6](https://co) - Delete KeyNavigableGridView
+### [Patch 6](https://code.videolan.org/videolan/vlc/-/merge_requests/2378) - Delete KeyNavigableGridView
 
 After trying to make KeyNavigableGridView work for patch 5, i understood (the hard way) that it's deprecated. Instead MainGridView had to be used, and KeyNavigableGridView to be deleted to avoid further confusion.
 
@@ -99,7 +99,7 @@ Commits:
 - [e78e9f2f](https://code.videolan.org/videolan/vlc/-/merge_requests/2378/diffs?commit_id=e78e9f2f2e42563e674c198a8c83bc6cbb3e5dde) delete KeyNavigableGridView
 
 
-### [Patch 7](https://co) - Bookmarks bar, fix PointingTooltip bugs, SliderBar improvements
+### [Patch 7](https://code.videolan.org/videolan/vlc/-/merge_requests/2517) - Bookmarks bar, fix PointingTooltip bugs, SliderBar improvements
 
 This patch was more difficult than the others, because outside of the amount of changes, i had a personal issue i had to deal with, a temporary mentor change (which had a different style of reviewing that i had to adjust) and two week vacations. All of these disoriented me and my productivity was not the highest. 
 
@@ -125,6 +125,6 @@ Commits:
 - [d3161967](https://code.videolan.org/videolan/vlc/-/merge_requests/2517/diffs?commit_id=d316196774658746d5573d90b22f9ab7477da5d2) qt/qml: implementation of bookmarks bar under the SliderBar
 
 
-### [Patch 8](https://co) - Error notifications (not compeltely finished)
+### Patch 8 - Error notifications (not compeltely finished)
 
 The current error message has several issues (pops up over miniplayer, no dismiss button, needs redesign). I started working on the error notification, which I redesigned and addded a counter on error messages that are repeated. There is still some work to do, like handling the miniplayer and showing all past errors in a dialog.
